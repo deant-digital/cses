@@ -1,7 +1,10 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 using ll = long long;
+
 vector<array<ll, 2>> ans;
+
 void solve(ll n, ll from, ll to, ll aux) {
   if (n == 0) {
     return;
@@ -10,6 +13,7 @@ void solve(ll n, ll from, ll to, ll aux) {
   ans.push_back({from, to});
   solve(n - 1, aux, to, from);
 }
+
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);

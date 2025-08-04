@@ -1,13 +1,18 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 using ll = long long;
+
 const array<ll, 4> dx{-1, 0, 0, 1};
 const array<ll, 4> dy{0, -1, 1, 0};
+
 string str;
 array<array<bool, 7>, 7> mat{};
+
 bool is_avail(ll x, ll y) {
   return x >= 0 && y >= 0 && x < 7 && y < 7 && !mat[x][y];
 }
+
 ll solve(ll idx, ll x, ll y) {
   if (x == 6 && y == 0) {
     return idx == 48 ? 1 : 0;
@@ -62,6 +67,7 @@ ll solve(ll idx, ll x, ll y) {
   mat[nx][ny] = false;
   return res;
 }
+
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);

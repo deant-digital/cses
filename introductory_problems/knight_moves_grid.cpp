@@ -1,8 +1,11 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 using ll = long long;
+
 const array<ll, 8> dx{-2, -2, -1, -1, 1, 1, 2, 2};
 const array<ll, 8> dy{-1, 1, -2, 2, -2, 2, -1, 1};
+
 template <typename T>
 void print_vec(const vector<T>& vec) {
   if (!vec.empty()) {
@@ -13,6 +16,7 @@ void print_vec(const vector<T>& vec) {
   }
   cout << '\n';
 }
+
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);

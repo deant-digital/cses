@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 using ll = long long;
+
 template <typename T>
 void print_vec(const vector<T>& vec) {
   if (!vec.empty()) {
@@ -11,6 +13,7 @@ void print_vec(const vector<T>& vec) {
   }
   cout << '\n';
 }
+
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);

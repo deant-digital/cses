@@ -1,7 +1,10 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 using ll = long long;
+
 vector<string> mat, ans;
+
 bool is_possible(ll x, ll y) {
   if (ans[x][y] == mat[x][y]) {
     return false;
@@ -14,12 +17,13 @@ bool is_possible(ll x, ll y) {
   }
   return true;
 }
+
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
   ll n, m;
   cin >> n >> m;
-  mat.resize(n);
+  mat.assign(n, {});
   for (auto& row : mat) {
     cin >> row;
   }

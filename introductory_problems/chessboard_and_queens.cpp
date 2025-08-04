@@ -1,10 +1,13 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 using ll = long long;
+
 array<string, 8> mat{};
 array<bool, 8> cols{};
 array<bool, 15> diag1{};
 array<bool, 15> diag2{};
+
 ll solve(ll row) {
   if (row == 8) {
     return 1;
@@ -23,6 +26,7 @@ ll solve(ll row) {
   }
   return res;
 }
+
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);

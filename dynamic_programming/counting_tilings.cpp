@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 using ll = long long;
+
 void handle(vector<ll>& vec, ll cur, ll nxt, ll row, ll n) {
   if (row >= n) {
     vec.push_back(nxt);
@@ -15,6 +17,7 @@ void handle(vector<ll>& vec, ll cur, ll nxt, ll row, ll n) {
     }
   }
 }
+
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);

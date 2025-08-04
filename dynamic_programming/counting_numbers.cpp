@@ -1,8 +1,11 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 using ll = long long;
+
 string str;
 ll dp[19][11][2];
+
 ll dfs(ll idx, ll last, ll tight) {
   if (idx >= str.size()) {
     return 1;
@@ -28,6 +31,7 @@ ll dfs(ll idx, ll last, ll tight) {
   x = res;
   return res;
 }
+
 ll solve(ll x) {
   if (x < 0) {
     return 0;
@@ -36,6 +40,7 @@ ll solve(ll x) {
   memset(dp, -1, sizeof(dp));
   return dfs(0, 10, 1);
 }
+
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);

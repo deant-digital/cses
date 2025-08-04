@@ -1,10 +1,14 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 using ll = long long;
+
 array<ll, 26> cnt{};
+
 bool is_possible(ll len) {
   return *max_element(cnt.begin(), cnt.end()) <= (len + 1) / 2;
 }
+
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);

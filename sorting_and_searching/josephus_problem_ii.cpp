@@ -5,9 +5,11 @@
 using namespace std;
 using namespace __gnu_pbds;
 using ll = long long;
+
 template <typename T>
 using ordered_set =
     tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+
 template <typename T>
 void print_vec(const vector<T>& vec) {
   if (!vec.empty()) {
@@ -18,6 +20,7 @@ void print_vec(const vector<T>& vec) {
   }
   cout << '\n';
 }
+
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);

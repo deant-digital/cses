@@ -1,7 +1,9 @@
 #include <bits/stdc++.h>
+
 using namespace std;
 using ll = long long;
-ll fast_exp(ll base, ll exp) {
+
+ll fast_pow(ll base, ll exp) {
   ll val{1};
   while (exp > 0) {
     if (exp % 2 == 1) {
@@ -12,6 +14,7 @@ ll fast_exp(ll base, ll exp) {
   }
   return val;
 }
+
 int main() {
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
@@ -22,11 +25,11 @@ int main() {
     cin >> k;
     --k;
     ll digits{1};
-    while (k >= 9 * digits * fast_exp(10, digits - 1)) {
-      k -= 9 * digits * fast_exp(10, digits - 1);
+    while (k >= 9 * digits * fast_pow(10, digits - 1)) {
+      k -= 9 * digits * fast_pow(10, digits - 1);
       ++digits;
     }
-    ll first{fast_exp(10, digits - 1)};
+    ll first{fast_pow(10, digits - 1)};
     cout << to_string(first + k / digits)[k % digits] << '\n';
   }
 }
